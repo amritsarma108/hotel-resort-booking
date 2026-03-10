@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-body text-gray-800 bg-luxury-cream dark:bg-luxury-dark;
+    @apply transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 dark:bg-luxury-darkSecondary/80;
+    @apply backdrop-blur-md rounded-2xl shadow-xl;
+    @apply border border-white/20 dark:border-gray-700/50;
+  }
+  
+  .luxury-button {
+    @apply px-8 py-4 bg-luxury-gold text-luxury-dark font-semibold;
+    @apply rounded-full transition-all duration-300;
+    @apply hover:bg-luxury-goldLight hover:shadow-lg hover:scale-105;
+    @apply focus:outline-none focus:ring-2 focus:ring-luxury-gold focus:ring-offset-2;
+  }
+  
+  .section-title {
+    @apply font-display text-4xl md:text-5xl font-bold;
+    @apply text-luxury-dark dark:text-white;
+  }
+  
+  .gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-luxury-gold to-luxury-goldLight;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
