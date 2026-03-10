@@ -5,3 +5,6 @@ dist
 .env
 .env.local
 
+
+# Auxly - AI Task Management (internal data)
+.auxly/

@@ -1,0 +1,4 @@
+git add .github/workflows/deploy.yml
+git commit -m "Add GitHub Pages deployment workflow"
+git push origin master
+
